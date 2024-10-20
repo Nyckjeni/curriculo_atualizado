@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #810947; 
+        }
+        .navbar-nav .nav-link, .navbar-brand {
+            color: white;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffc107; 
+        }
+
+        .intro-section {
+            position: relative; /* Adicionado para posicionar o pseudo-elemento */
+            background-image: url('img/fundo.png'); /* Substitua pela imagem desejada */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 6rem 0;
+        }
+
+        .intro-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Efeito de escurecimento */
+            z-index: 1;
+        }
+
+        .intro-section h1, .intro-section p {
+            position: relative; /* Para que o texto fique acima do fundo escurecido */
+            z-index: 2; /* Aumentar o índice z para ficar acima do pseudo-elemento */
+        }
+
+        .intro-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .intro-section p {
+            font-size: 1.2rem;
+        }
+
+        /* Estilização para as seções de perfil */
+        .profile-section {
+            padding: 4rem 2rem;
+        }
+        .profile-section h2 {
+            font-size: 2.5rem;
+            color: #810947;
+            margin-bottom: 1.5rem;
+        }
+        .profile-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Seção clara para alternar */
+        .bg-light {
+            background-color: #f9f9f9;
+        }
+
+        /* Logo e ícones sociais */
+        .logo {
+            width: 50px;
+            height: auto;
+        }
+        .social-icons {
+            width: 30px;
+            height: auto;
+            margin-left: 10px;
+        }
+
+        /* Contatos no rodapé */
+        footer {
+            background-color: #810947;
+            color: white;
+            padding: 2rem 0;
+        }
+        footer h2 {
+            font-size: 2rem;
+        }
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    
+    <title>Nycolle Jenifer</title>
+</head>
+<body>
+
+    <!-- Barra de Navegação -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/nome.png" alt="Logo" class="logo"> <!-- Espaço para a logo -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobremim.html">Sobre Mim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="formacao.html">Formação</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="experiencia.html">Experiência</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="formulario.html">Formulário Freelancer</a>
+                        </li>
+                    </ul>
+
+                    <!-- Ícones sociais -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="mailto:nycolle.desenvolvedora@gmail.com" target="_blank">
+                                E-mail
+                                <img src="img/email.png" alt="Ícone de e-mail" class="social-icons">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.linkedin.com/in/nycolle-jenifer-5825a8232/" target="_blank">
+                                LinkedIn
+                                <img src="img/linkedlin.png" alt="Ícone do LinkedIn" class="social-icons"> <!-- Corrigido o nome da imagem -->
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/Nyckjeni" target="_blank">
+                                Github
+                                <img src="img/github.png" alt="Ícone do Github" class="social-icons">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Seção de Apresentação com imagem de fundo -->
+    <section class="intro-section">
+        <div class="container">
+            <h1>Nycolle Jenifer</h1>
+            <p>Desenvolvedora Web | Criando soluções inovadoras</p>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Mim -->
+    <section id="sobre-mim" class="profile-section">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <p>Olá, sou Nycolle Jenifer, uma desenvolvedora web com experiência em HTML, CSS, JavaScript e frameworks como Bootstrap. Adoro criar soluções elegantes e funcionais, buscando sempre aprimorar minhas habilidades e aprender novas tecnologias.</p>
+        </div>
+    </section>
+
+    <!-- Seção Formação -->
+    <section id="formacao" class="profile-section bg-light">
+        <div class="container">
+            <h2>Formação</h2>
+            <p>Sou estudante do 2º período de Análise e Desenvolvimento de Sistemas pela Faculdade Senac e possuo curso técnico em Desenvolvimento de Sistemas pela Escola Técnica Estadual Luiz Alves Lacerda, cursos complementares em desenvolvimento web, design responsivo e UX/UI.</p>
+        </div>
+    </section>
+
+    <!-- Seção Experiência -->
+    <section id="experiencia" class="profile-section">
+        <div class="container">
+            <h2>Experiência</h2>
+            <p>Trabalho como desenvolvedora web, colaborando em projetos de websites corporativos, e-commerces e sistemas de gerenciamento de conteúdo. Minhas principais habilidades incluem:</p>
+            <ul>
+                <li>Desenvolvimento front-end com HTML, CSS, JavaScript e frameworks como Bootstrap</li>
+                <li>Integração de APIs RESTful</li>
+                <li>Design responsivo e otimização de performance</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Seção de Contatos -->
+    <footer class="profile-section">
+        <div class="container">
+            <h2>Contatos</h2>
+            <div class="contact-info">
+                <p>E-mail: <a href="mailto:nycolle.desenvolvedora@gmail.com">nycolle.desenvolvedora@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/nycolle-jenifer-5825a8232/" target="_blank">Nycolle Jenifer</a></p>
+                <span> Copyright © 2024 Nycolle

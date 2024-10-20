@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    background-color: #810947; 
+}
+.navbar-nav .nav-link, .navbar-brand {
+    color: white;
+}
+.navbar-nav .nav-link:hover {
+    color: #ffc107; 
+}
+.logo {
+    width: 50px;
+    height: auto;
+}
+.social-icons {
+    width: 30px;
+    height: auto;
+    margin-left: 10px;
+}
+.intro-section {
+    background-image: url('../img/fundo.png'); 
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    text-align: center;
+    padding: 4rem 0; 
+    position: relative;
+}
+.intro-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+.intro-section h1, .intro-section p {
+    position: relative;
+    z-index: 2; /
+}
+.form-container {
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    max-width: 800px;
+}
+legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #810947;
+}
+label span {
+    color: red;
+}
